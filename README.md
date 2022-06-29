@@ -15,3 +15,8 @@ My current rating is 1658 (max. 1748) on codeforces. I will pick questions with 
 
 Season #1:
 June 20th, 2022 ~ September 18th, 2022
+
+Solved (AC) by my own / Learned from the tutorial
+1800:  3 / 0
+1900:  4 / 1
+2000:  0 / 1
