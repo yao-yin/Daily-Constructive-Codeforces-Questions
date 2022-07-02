@@ -1,5 +1,6 @@
 // 20220629
 // https://codeforces.com/problemset/problem/1438/C
+
 #include <iostream>
 #include <iomanip>
 #include <cmath>
