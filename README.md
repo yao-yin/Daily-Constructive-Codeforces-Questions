@@ -20,6 +20,6 @@ June 20th, 2022 ~ September 18th, 2022
 Solved (AC) by my own / Learned from the tutorial
 1800:  3 / 0
 1900:  5 / 1
-2000:  8 / 4
+2000:  9 / 4
 2100:  0 / 1
 ```
