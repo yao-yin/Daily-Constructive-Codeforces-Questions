@@ -35,36 +35,42 @@ inline void quickread() {
 
 void solve() {
     vector<int> a(n, 0);
+    for (int i = 0; i < n; i ++) {
+        cin >> a[i];
+    }
     vector<bool> isConnected(n, 0);
-    for (int i = 0; i < n; i ++) cin >> a[i];
     priority_queue<pii, vector<pii>, greater<pii>> pq;
     for (int i = 0; i < n; i ++) {
         pq.push({a[i], i});
     }
+
     ll tot = 0;
-    while(!pq.empty()) {
+
+    while (!pq.empty()) {
         auto [x, idx] = pq.top();
         pq.pop();
-        if (x >= p) break; 
-        for (int i = idx; i > 0; i --) {
-            if (isConnected[i-1]) break;
-            if (a[i-1] % x == 0) {
-               tot += x;
-               isConnected[i-1] = true; 
+        if (x >= p) break;
+        for (int j = idx - 1; j >= 0; j --) {
+            if (isConnected[j]) break;
+            if (a[j] % x == 0) {
+                isConnected[j] = true;
+                tot += x;
             } else {
                 break;
             }
         }
-        for (int i = idx; i < n - 1; i ++) {
-            if (isConnected[i]) break;
-            if (a[i+1] % x == 0) {
+
+        for (int j = idx; j < n - 1; j ++) {
+            if (isConnected[j]) break;
+            if (a[j+1] % x == 0) {
+                isConnected[j] = true;
                 tot += x;
-                isConnected[i] = true;
             } else {
                 break;
             }
         }
     }
+
     for (int i = 0; i < n - 1; i ++) {
         if (!isConnected[i]) tot += p;
     }
